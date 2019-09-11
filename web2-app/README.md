@@ -1,6 +1,7 @@
 # Web2App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+Link: http://i400672.hera.fhict.nl/
 
 ## Development server
 
