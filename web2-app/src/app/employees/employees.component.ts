@@ -23,13 +23,13 @@ export class EmployeesComponent implements OnInit {
       {
         id: 2,
         name : "Alex",
-        age: 28,
+        age: 30,
         position: "Security Chief"
 
       },{
         id: 3,
         name : "Hugh",
-        age: 28,
+        age: 22,
         position: "Web Designer"
 
       }
