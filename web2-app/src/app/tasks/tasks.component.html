@@ -1,1 +1,14 @@
-<p>tasks works!</p>
+<table style="width:100%">
+    <tr>
+      <th>Id</th>
+      <th>Task</th>
+      <th>Finished</th>
+    </tr>
+    <tr *ngFor="let task of tasks">
+      <td  >{{task.id}}</td>
+      <td  >{{task.name}}</td>
+      <td  >{{task.finished}}</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>

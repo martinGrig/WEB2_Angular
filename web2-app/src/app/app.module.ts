@@ -7,6 +7,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { EmployeesComponent } from './employees/employees.component';
 
 import { DepartmentsComponent } from './departments/departments.component';
+import { TasksComponent } from './tasks/tasks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -17,8 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
     EmployeesComponent,
 
-    DepartmentsComponent
+    DepartmentsComponent,
 
+    TasksComponent
   ],
   imports: [
     BrowserModule,
