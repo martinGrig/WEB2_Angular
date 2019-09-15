@@ -7,6 +7,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { EmployeesComponent } from './employees/employees.component';
 
 import { DepartmentsComponent } from './departments/departments.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DepartmentsComponent } from './departments/departments.component';
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

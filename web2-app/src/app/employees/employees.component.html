@@ -1,3 +1,16 @@
-<ul *ngFor="let employee of employees">
-<li> {{ employee.title }} </li>
-</ul>
+<table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Id</th>
+      <th>Position</th>
+    </tr>
+    <tr *ngFor="let employee of employees">
+      <td  >{{employee.name}}</td>
+      <td  >{{employee.age}}</td>
+      <td  >{{employee.id}}</td>
+      <td  >{{employee.position}}</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
