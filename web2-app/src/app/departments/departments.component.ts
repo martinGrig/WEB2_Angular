@@ -1,5 +1,6 @@
 import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
 import {Department} from '../Models/Departments';
+import {DEPARTMENTS} from '../Models/mock-departments';
 
 @Component({
   selector: 'app-departments',
@@ -7,29 +8,16 @@ import {Department} from '../Models/Departments';
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
-  departments: Department[];
+  departments = DEPARTMENTS;
+  selectedDepartment: Department;
 
   constructor() { }
 
-  ngOnInit() { 
-    this.departments = [
-      {
-        id: 1,
-        name : "HR",
-        location: "Tilburg"
+  ngOnInit() {
+  }
 
-      },
-      {
-        id: 2,
-        name : "Security",
-        location: "Amsterdam"
-
-      },{
-        id: 3,
-        name : "Engineering",
-        location: "Eindhoven"
-
-      }
-    ]
-}
+  onSelect(department: Department): void {
+    this.selectedDepartment = department;
+  }
+  
 }

@@ -1,14 +1,25 @@
-<table style="width:100%">
-    <tr>
-      <th>Name</th>
-      <th>Id</th>
-      <th>Location</th>
-    </tr>
-    <tr *ngFor="let department of departments">
-      <td  >{{department.name}}</td>
-      <td  >{{department.id}}</td>
-      <td  >{{department.location}}</td>
-    </tr>
-    <tr>
-    </tr>
-  </table>
+<h2>Departments</h2>
+<ul class="departments">
+  <li *ngFor="let department of departments"
+    [class.selected]="department === selectedDepartment"
+    (click)="onSelect(department)">
+    <span class="badge">{{department.id}}</span> {{department.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedDepartment">
+
+  <h2>{{selectedDepartment.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedDepartment.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedDepartment.name" placeholder="name"/>
+    </label>
+  </div>
+  <div>
+    <label>location:
+      <input [(ngModel)]="selectedDepartment.location" placeholder="location"/>
+    </label>
+  </div>
+
+</div>
