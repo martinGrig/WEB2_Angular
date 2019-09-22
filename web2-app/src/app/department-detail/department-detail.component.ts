@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Department }         from '../departments';
+import { Department }         from '../Departments';
 import { DepartmentService }  from '../department.service';
 
 
