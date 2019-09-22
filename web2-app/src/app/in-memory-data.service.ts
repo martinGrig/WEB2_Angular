@@ -1,5 +1,6 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Task } from './task';
+import { Department } from './Departments';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -18,8 +19,17 @@ export class InMemoryDataService implements InMemoryDbService {
         { id: 18, name: 'Fight'},
         { id: 19, name: 'Crouch'},
         { id: 20, name: 'Sleep'}
-          ];
-    return {tasks};
+    ];
+          
+    const departments = [
+      { id: 1, name : "HR", location: "Tilburg"},
+      { id: 2, name : "Security", location: "Amsterdam" },
+      { id: 3, name : "Engineering", location: "Eindhoven"},
+      { id: 4, name : "Accouting", location: "Tilburg"},
+      { id: 5, name : "Sales", location: "Amsterdam" },
+      { id: 6, name : "Production", location: "Eindhoven"}
+      ];        
+    return {tasks, departments};
   }
 
   // Overrides the genId method to ensure that a task always has an id.
@@ -30,4 +40,6 @@ export class InMemoryDataService implements InMemoryDbService {
   genId(tasks: Task[]): number {
     return tasks.length > 0 ? Math.max(...tasks.map(task => task.id)) + 1 : 11;
   }
+
+  
 }

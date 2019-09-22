@@ -9,10 +9,13 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { TaskDetailComponent }  from './task-detail/task-detail.component';
+
  
 import { EmployeesComponent } from './employees/employees.component';
 
 import { DepartmentsComponent } from './departments/departments.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -39,6 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EmployeesComponent,
 
     DepartmentsComponent,
+
+    DepartmentDetailComponent,
 
   ],
   providers: [],
