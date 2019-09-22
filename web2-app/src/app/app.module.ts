@@ -17,6 +17,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 
 @NgModule({
@@ -44,6 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DepartmentsComponent,
 
     DepartmentDetailComponent,
+
+    EmployeeDetailComponent,
 
   ],
   providers: [],

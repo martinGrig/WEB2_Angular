@@ -1,5 +1,7 @@
 import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
-import {Employee} from '../Models/Employee';
+import {Employee} from '../employees';
+import { EmployeeService } from '../employee.service';
+
 
 @Component({
   selector: 'app-employees',
@@ -7,33 +9,33 @@ import {Employee} from '../Models/Employee';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
- employees: Employee[];
 
-  constructor() { }
+  employees:Employee[];
 
-  ngOnInit() { 
-    this.employees = [
-      {
-        id: 1,
-        name : "Jax",
-        age: 28,
-        position: "Engineer"
+  constructor(private employeeService: EmployeeService) { }
 
-      },
-      {
-        id: 2,
-        name : "Alex",
-        age: 30,
-        position: "Security Chief"
-
-      },{
-        id: 3,
-        name : "Hugh",
-        age: 22,
-        position: "Web Designer"
-
-      }
-    ]
+  ngOnInit() {
+    this.getEmployees();
   }
+
+  getEmployees(): void {
+    this.employeeService.getEmployees()
+    .subscribe(employees => this.employees = employees);
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.employeeService.addEmployee({ name } as Employee)
+      .subscribe(employee => {
+        this.employees.push(employee);
+      });
+  }
+
+  delete(employee: Employee): void {
+    this.employees = this.employees.filter(h => h !== employee);
+    this.employeeService.deleteEmployee(employee).subscribe();
+  }
+ 
 
 }
