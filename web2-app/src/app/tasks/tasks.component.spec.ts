@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { TasksComponent } from './tasks.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('TasksComponent', () => {
   let component: TasksComponent;
@@ -8,7 +9,8 @@ describe('TasksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TasksComponent ]
+      declarations: [ TasksComponent ],
+      imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule],
     })
     .compileComponents();
   }));
@@ -19,7 +21,7 @@ describe('TasksComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 });
