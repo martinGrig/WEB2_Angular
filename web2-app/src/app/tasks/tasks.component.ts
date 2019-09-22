@@ -1,35 +1,24 @@
-import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
-import {Task} from '../Models/Tasks';
+import { Component, OnInit } from '@angular/core';
+import { Task } from '../task';
+import { TASKS } from '../mock-tasks';
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
+
 export class TasksComponent implements OnInit {
-  tasks: Task[];
+
+  tasks = TASKS;
+  selectedTask: Task;
 
   constructor() { }
 
-  ngOnInit() { 
-    this.tasks = [
-      {
-        id: 1,
-        name : "Calculate",
-        finished : true,
+  ngOnInit() {
+  }
 
-      },
-      {
-        id: 2,
-        name : "Design",
-        finished : false,
-
-      },{
-        id: 3,
-        name : "Guard",
-        finished : true,
-
-      }
-    ]
-}
+  onSelect(task: Task): void {
+    this.selectedTask = task;
+  }
 }
