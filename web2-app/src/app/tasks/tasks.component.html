@@ -12,7 +12,7 @@
 
 <ul class="tasks">
   <li *ngFor="let task of tasks">
-    <a routerLink="/detail/{{task.id}}">
+    <a routerLink="/details/{{task.id}}">
       <span class="badge">{{task.id}}</span> {{task.name}}
     </a>
     <button class="delete" title="delete task"

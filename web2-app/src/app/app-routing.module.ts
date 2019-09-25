@@ -12,12 +12,12 @@ import { EmployeeDetailComponent }  from './employee-detail/employee-detail.comp
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'detail/:id', component: TaskDetailComponent },
-  { path: 'tasks', component: TasksComponent },
-  { path: 'detail/:id', component: DepartmentDetailComponent },
-  { path: 'departments', component: DepartmentsComponent },
   { path: 'detail/:id', component: EmployeeDetailComponent },
-  { path: 'employees', component: EmployeesComponent }
+  { path: 'employees', component: EmployeesComponent },
+  { path: 'detailss/:id', component: DepartmentDetailComponent },
+  { path: 'departments', component: DepartmentsComponent },
+  { path: 'details/:id', component: TaskDetailComponent },
+  { path: 'tasks', component: TasksComponent },
 ];
 
 @NgModule({
