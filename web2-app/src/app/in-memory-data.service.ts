@@ -10,16 +10,16 @@ import {Employee} from './employees';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const tasks = [
-        { id: 11, name: 'Run'},
-        { id: 12, name: 'Jump'},
-        { id: 13, name: 'Climb'},
-        { id: 14, name: 'Fly'},
-        { id: 15, name: 'Swim'},
-        { id: 16, name: 'Drive'},
-        { id: 17, name: 'Cycle'},
-        { id: 18, name: 'Fight'},
-        { id: 19, name: 'Crouch'},
-        { id: 20, name: 'Sleep'}
+        { id: 11, name: 'Run', department: 'HR', employee: 'John'},
+        { id: 12, name: 'Jump', department: 'Security', employee: 'Lucy'},
+        { id: 13, name: 'Climb', department: 'Engineering', employee: 'Veselin'},
+        { id: 14, name: 'Fly', department: 'Accouting', employee: 'Jax'},
+        { id: 15, name: 'Swim', department: 'Sales', employee: 'Alexander'},
+        { id: 16, name: 'Drive', department: 'Production', employee: 'Jerry'},
+        { id: 17, name: 'Cycle', department: 'HR', employee: 'John'},
+        { id: 18, name: 'Fight', department: 'Security', employee: 'Lucy'},
+        { id: 19, name: 'Crouch', department: 'Engineering', employee: 'Veselin'},
+        { id: 20, name: 'Sleep', department: 'Accouting', employee: 'Jax'}
     ];
           
     const departments = [

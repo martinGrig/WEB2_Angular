@@ -6,6 +6,19 @@
       <input [(ngModel)]="task.name" placeholder="name"/>
     </label>
   </div>
+  <div>
+    <label>department:
+      <input [(ngModel)]="task.department" placeholder="department"/>
+    </label>
+  </div>
+  <div>
+    <label>employee:
+      <input [(ngModel)]="task.employee" placeholder="employee"/>
+    </label>
+  </div>
+  
+
+
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
 </div>
