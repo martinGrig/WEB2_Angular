@@ -26,10 +26,19 @@ export class DepartmentsComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { alert("Please type a name"); return; }
-    this.departmentService.addDepartment({ name } as Department)
-      .subscribe(department => {
-        this.departments.push(department);
-      });
+    else{
+      this.departments.forEach(function (value){ 
+        if(name == value.name){alert("That department already exists"); return;}
+        
+          this.departmentService.addDepartment({ name } as Department)
+          .subscribe(department => {
+          this.departments.push(department);
+          });
+        
+      })
+    }
+    
+
   }
 
   delete(department: Department): void {
