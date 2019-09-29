@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Department } from '../departments';
 import { DepartmentService } from '../department.service';
+import { Task } from '../task';
+import { TaskService } from '../task.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -9,15 +12,26 @@ import { DepartmentService } from '../department.service';
 })
 export class DashboardComponent implements OnInit {
   departments: Department[] = [];
+  tasks: Task[] = [];
 
-  constructor(private departmentService: DepartmentService) { }
+
+  constructor(private departmentService: DepartmentService,
+    private taskService: TaskService) { }
+  
 
   ngOnInit() {
     this.getDepartments();
+    this.getTasks();
+
   }
 
   getDepartments(): void {
     this.departmentService.getDepartments()
       .subscribe(departments => this.departments = departments.slice(1, 5));
   }
+  getTasks(): void {
+    this.taskService.getTasks()
+      .subscribe(tasks => this.tasks = tasks.slice(1, 5));
+  }
+
 }
