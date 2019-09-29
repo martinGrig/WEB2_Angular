@@ -24,7 +24,7 @@ export class TasksComponent implements OnInit {
 
   add(name: string): void {
     name = name.trim();
-    if (!name) { return; }
+    if (!name) { alert("Please type a name"); return; }
     this.taskService.addTask({ name } as Task)
       .subscribe(task => {
         this.tasks.push(task);

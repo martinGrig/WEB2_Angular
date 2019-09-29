@@ -25,7 +25,7 @@ export class EmployeesComponent implements OnInit {
 
   add(name: string): void {
     name = name.trim();
-    if (!name) { return; }
+    if (!name) { alert("Please type a name"); return; }
     this.employeeService.addEmployee({ name } as Employee)
       .subscribe(employee => {
         this.employees.push(employee);
