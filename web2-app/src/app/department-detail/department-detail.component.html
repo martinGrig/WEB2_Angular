@@ -11,6 +11,16 @@
         <input [(ngModel)]="department.location" placeholder="location"/>
       </label>
     </div>
+    <div>
+      <label>Emplyees:
+        <input [(ngModel)]="deartment.employees" placeholder="employees"/>
+      </label>
+    </div>
+    <div>
+      <label>Tasks:
+        <input [(ngModel)]="deartment.task" placeholder="task"/>
+      </label>
+    </div>
     <button (click)="goBack()">go back</button>
     <button (click)="save()">save</button>
   </div>
