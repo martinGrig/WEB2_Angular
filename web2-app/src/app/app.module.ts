@@ -7,17 +7,21 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent } from './app.component';
+
 import { TasksComponent } from './tasks/tasks.component';
 import { TaskDetailComponent }  from './task-detail/task-detail.component';
 
  
 import { EmployeesComponent } from './employees/employees.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 import { DepartmentsComponent } from './departments/departments.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DepartmentSearchComponent } from './department-search/department-search.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -47,6 +51,10 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     DepartmentDetailComponent,
 
     EmployeeDetailComponent,
+
+    DashboardComponent,
+
+    DepartmentSearchComponent,
 
   ],
   providers: [],

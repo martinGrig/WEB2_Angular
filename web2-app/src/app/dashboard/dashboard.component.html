@@ -1,0 +1,11 @@
+<h3>Dashboard</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let department of departments" class="col-1-4"
+      routerLink="/detailss/{{department.id}}">
+    <div class="module department">
+      <h4>{{department.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-department-search></app-department-search>
