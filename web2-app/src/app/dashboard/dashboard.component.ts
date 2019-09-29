@@ -27,11 +27,11 @@ export class DashboardComponent implements OnInit {
 
   getDepartments(): void {
     this.departmentService.getDepartments()
-      .subscribe(departments => this.departments = departments.slice(1, 5));
+      .subscribe(departments => this.departments = departments.slice(0, 4));
   }
   getTasks(): void {
     this.taskService.getTasks()
-      .subscribe(tasks => this.tasks = tasks.slice(1, 5));
+      .subscribe(tasks => this.tasks = tasks.slice(0, 4));
   }
 
 }
