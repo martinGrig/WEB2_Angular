@@ -1,16 +1,17 @@
 <div *ngIf="employee">
     <h2>{{employee.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{employee.id}}</div>
+    <div><span>ID: </span>{{employee.id}}</div>
     <div>
-      <label>name:
+      <label>Name:
         <input [(ngModel)]="employee.name" placeholder="name"/>
       </label>
     </div>
     <div>
-      <label>position:
+      <label>Position:
         <input [(ngModel)]="employee.position" placeholder="position"/>
       </label>
     </div>
+    <div><span>Department: </span>{{employee.department}}</div>
     <button (click)="goBack()">go back</button>
     <button (click)="save()">save</button>
   </div>
