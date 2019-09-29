@@ -1,23 +1,14 @@
 <div *ngIf="task">
-  <h2>{{task.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{task.id}}</div>
+  <h2>{{task.name}} Details</h2>
+  <div><span>ID: </span>{{task.id}}</div>
   <div>
-    <label>name:
+    <label>Name:
       <input [(ngModel)]="task.name" placeholder="name"/>
     </label>
   </div>
-  <div>
-    <label>department:
-      <input [(ngModel)]="task.department" placeholder="department"/>
-    </label>
-  </div>
-  <div>
-    <label>employee:
-      <input [(ngModel)]="task.employee" placeholder="employee"/>
-    </label>
-  </div>
-  
-
+  <div><span>Department: </span>{{task.department}}</div>
+  <div><span>Employee(s) working on it: </span>{{task.employee}}</div>
+  <div><span>Deadline: </span>{{task.deadline}}</div>
 
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
