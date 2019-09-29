@@ -29,12 +29,12 @@ export class InMemoryDataService implements InMemoryDbService {
       ];
       
       const employees = [
-        { id: 1, name : "John", position: "Sales"},
-        { id: 2, name : "Lucy", position: "Security" },
-        { id: 3, name : "Veselin", position: "Engineer"},
-        { id: 4, name : "Jax", position: "Engineer"},
-        { id: 5, name : "Alexander", position: "CEO" },
-        { id: 6, name : "Jerry", position: "Janitor"}
+        { id: 1, name : "John", position: "Sales", department: "HR"},
+        { id: 2, name : "Lucy", position: "Security", department: "Security" },
+        { id: 3, name : "Veselin", position: "Engineer", department: "Engineering"},
+        { id: 4, name : "Jax", position: "Engineer", department: "Accounting"},
+        { id: 5, name : "Alexander", position: "CEO", department: "Sales" },
+        { id: 6, name : "Jerry", position: "Janitor", department: "Production"}
       ]
     return {tasks, departments, employees};
   }
