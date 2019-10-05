@@ -1,13 +1,13 @@
 <div *ngIf="department">
-    <h2>{{department.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{department.id}}</div>
+    <h2>{{department.name}} Details</h2>
+    <div><span>ID: </span>{{department.id}}</div>
     <div>
-      <label>name:
+      <label>Name:
         <input [(ngModel)]="department.name" placeholder="name"/>
       </label>
     </div>
     <div>
-      <label>location:
+      <label>Location:
         <input [(ngModel)]="department.location" placeholder="location"/>
       </label>
     </div>

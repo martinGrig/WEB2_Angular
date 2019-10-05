@@ -17,7 +17,6 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 
 import { DepartmentsComponent } from './departments/departments.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
-import { DepartmentSearchComponent } from './department-search/department-search.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -59,7 +58,6 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
     DashboardComponent,
 
-    DepartmentSearchComponent,
 
   ],
   providers: [],
