@@ -67,7 +67,7 @@ button.delete {
   position: relative;
   left: 194px;
   top: -32px;
-  background-color: gray !important;
+  background-color: rgb(119, 27, 27) !important;
   color: white;
 }
 

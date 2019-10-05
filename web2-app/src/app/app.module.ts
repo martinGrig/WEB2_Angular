@@ -23,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+//Bootstrap Modules
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
 
 @NgModule({
   imports: [
@@ -30,6 +33,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ButtonsModule.forRoot(),
+    
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
