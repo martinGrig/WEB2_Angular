@@ -1,14 +1,19 @@
 <h2>Employees</h2>
 
 <div>
-  <label>Employee name:
-    <input #employeeName />
+  <label>Employee Name:
+    <!-- Search form -->
+<div class="md-form mt-0">
+    <input #employeeName class="form-control" type="text" placeholder="Name" aria-label="Search"/>
+  </div>
+   
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(employeeName.value); employeeName.value=''">
-    add
+  <button class="add" (click)="add(employeeName.value); employeeName.value=''">
+    Add
   </button>
 </div>
+<br>
 
 <ul class="employees">
   <li *ngFor="let employee of employees">
