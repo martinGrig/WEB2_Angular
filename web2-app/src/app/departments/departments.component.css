@@ -10,8 +10,8 @@
   background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
+  height: 3em;
+  border-radius: 0px;
 }
 
 .departments li:hover {
@@ -26,6 +26,7 @@
   position: relative;
   display: block;
   width: 250px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .departments a:hover {
@@ -36,38 +37,50 @@
   display: inline-block;
   font-size: small;
   color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
+  padding: 0.5em 0.9em 0.9em 0.9em;
+  background-color:#1e4672;
   line-height: 1em;
   position: relative;
   left: -1px;
-  top: -4px;
-  height: 1.8em;
+  top: -3px;
+  height: 3em;
   min-width: 16px;
-  text-align: right;
+  text-align: center;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
 
-button {
-  background-color: #eee;
+button.add {
+  background-color: rgb(29, 23, 112);
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   cursor: hand;
   font-family: Arial;
+  height: 2.5em;
+  color: #EEE;
 }
 
 button:hover {
-  background-color: #cfd8dc;
+  background-color: #367b99;
 }
 
 button.delete {
+  inline-size: 3.5em;
+  height: 3em;
   position: relative;
   left: 194px;
-  top: -32px;
+  top: -43px;
   background-color: rgb(119, 27, 27) !important;
   color: white;
+}
+
+.departments1{
+  margin-left: 42%;
+}
+
+.font-weight-bold {
+  margin-left: 7%;
 }
 

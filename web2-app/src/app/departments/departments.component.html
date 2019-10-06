@@ -1,21 +1,30 @@
-<h2>Departments</h2>
+<div class="departments1">
 
-<div>
-  <label>Department name:
-    <input #departmentName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(departmentName.value); departmentName.value=''">
-    add
-  </button>
-</div>
-
-<ul class="departments">
-  <li *ngFor="let department of departments">
-    <a routerLink="/detailss/{{department.id}}">
-      <span class="badge">{{department.id}}</span> {{department.name}}
-    </a>
-    <button class="delete" title="delete department"
-      (click)="delete(department)">x</button>
-  </li>
-</ul>
+  <h2 class="font-weight-bold">Departments</h2>
+  
+  
+  <div>
+    <label>
+      <!-- Search form -->
+  <div class="md-form mt-0">
+      <input #departmentName class="form-control" type="text" placeholder="Name" aria-label="Search"/>
+    </div>
+     
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add" (click)="add(departmentName.value); departmentName.value=''">
+      Add
+    </button>
+  </div>
+  <br>
+  
+  <ul class="departments">
+    <li *ngFor="let department of departments">
+      <a routerLink="/detailss/{{department.id}}">
+        <span class="badge">{{department.id}}</span> {{department.name}}
+      </a>
+      <button class="delete" title="delete department"
+        (click)="delete(department)">x</button>
+    </li>
+  </ul>
+  </div>

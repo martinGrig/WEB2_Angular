@@ -1,18 +1,19 @@
-<div *ngIf="department">
-    <h2>{{department.name}} Details</h2>
-    <div><span>ID: </span>{{department.id}}</div>
-    <div>
-      <label>Name:
-        <input [(ngModel)]="department.name" placeholder="name"/>
-      </label>
+<div class="position">
+  <div *ngIf="department">
+      <h2>{{department.name}} Details</h2>
+      <div><span class="badge badge-ID" >ID: </span> {{department.id}}</div>
+      <div>
+        <label>Name:
+          <input type="text" class="form-control" [(ngModel)]="department.name" placeholder="name"/>
+        </label>
+      </div>
+      <div>
+        <label>Position:
+          <input type="text" class="form-control" [(ngModel)]="department.location" placeholder="location"/>
+        </label>
+      </div>
+      <div class="font-weight-bold"><span class="badge badge-secondary">Employee(s) working in it: </span>{{department.employees}}</div>
+      <button type="button" class="btn btn-light" (click)="goBack()">Go Back</button>
+      <button class="backbutton" (click)="save()">Save</button>
     </div>
-    <div>
-      <label>Location:
-        <input [(ngModel)]="department.location" placeholder="location"/>
-      </label>
-    </div>
-    <div><span>Employee(s) working in it: </span>{{department.employees}}</div>
-    
-    <button (click)="goBack()">go back</button>
-    <button (click)="save()">save</button>
   </div>
