@@ -16,8 +16,8 @@ nav a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: rgb(15, 34, 95);
-  border-radius: 4px;
+  background-color: #144f6e;
+  border-radius: 25px;
   block-size: 2.8em;
   min-height: 42px;
   text-align: center;
@@ -28,11 +28,11 @@ nav a:visited, a:link {
   color: #e7eef1;
 }
 nav a:hover {
-  color: #039be5;
+  color: #144f6e;
   background-color: #CFD8DC;
 }
 nav a.active {
-  color: #039be5;
+  color: #144f6e;
 }
 
 .sections{

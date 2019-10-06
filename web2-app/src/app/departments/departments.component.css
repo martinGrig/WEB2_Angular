@@ -38,7 +38,7 @@
   font-size: small;
   color: white;
   padding: 0.5em 0.9em 0.9em 0.9em;
-  background-color:#1e4672;
+  background-color:#144f6e;
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -51,7 +51,7 @@
 }
 
 button.add {
-  background-color: rgb(29, 23, 112);
+  background-color: #144f6e;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
