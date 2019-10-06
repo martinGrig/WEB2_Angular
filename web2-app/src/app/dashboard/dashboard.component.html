@@ -2,7 +2,9 @@
 <div class="grid grid-pad">
   <a *ngFor="let task of tasks" class="col-1-4"
       routerLink="/details/{{task.id}}">
-    <div class="module task">
+    <div class="module task"
+      popover="ID: {{task.id}} Name: {{task.name}} Department: {{task.department}} Employee(s) working on it: {{task.employee}} Deadline: {{task.deadline}}"
+      triggers="mouseenter:mouseleave">
       <h4>{{task.name}}</h4>
     </div>
   </a>
@@ -12,7 +14,9 @@
 <div class="grid grid-pad">
   <a *ngFor="let department of departments" class="col-1-4"
       routerLink="/detailss/{{department.id}}">
-    <div class="module department">
+    <div class="module department"
+    popover="ID: {{department.id}} Name: {{department.name}} Location: {{department.location}} Employee(s) working in it: {{department.employees}}"
+    triggers="mouseenter:mouseleave">
       <h4>{{department.name}}</h4>
     </div>
   </a>
@@ -22,7 +26,9 @@
 <div class="grid grid-pad">
   <a *ngFor="let employee of employees" class="col-1-4"
       routerLink="/detail/{{employee.id}}">
-    <div class="module employee">
+    <div class="module employee"
+    popover="ID: {{employee.id}} Name: {{employee.name}} Position: {{employee.position}} Department: {{employee.department}}"
+    triggers="mouseenter:mouseleave">
       <h4>{{employee.name}}</h4>
     </div>
   </a>

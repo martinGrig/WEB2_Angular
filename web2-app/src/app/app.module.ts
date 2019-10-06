@@ -28,6 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 import { TaskSearchComponent } from './task-search/task-search.component';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 
 
 
@@ -45,7 +46,10 @@ import { TaskSearchComponent } from './task-search/task-search.component';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    
+
+    PopoverModule.forRoot()
   ],
 
   declarations: [
