@@ -1,0 +1,15 @@
+<div class="searchposition">
+    <div id="search-component">
+        <h4><label for="search-box"></label></h4>
+        
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" #searchBox id="search-box" (input)="search(searchBox.value)" />
+        
+        <ul class="search-result">
+          <li *ngFor="let task of tasks$ | async" >
+            <a routerLink="/details/{{task.id}}">
+              {{task.name}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>

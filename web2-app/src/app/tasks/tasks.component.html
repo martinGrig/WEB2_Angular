@@ -1,15 +1,23 @@
-<h2>Tasks</h2>
+<div class="tasks1">
 
-<div>
-  <label>Task name:
-    <input #taskName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(taskName.value); taskName.value=''">
-    add
-  </button>
-</div>
-
+  <h2 class="font-weight-bold">Tasks</h2>
+  
+  
+  <div>
+    <label>
+      <!-- Search form -->
+  <div class="md-form mt-0">
+      <input #taskName class="form-control" type="text" placeholder="Name" aria-label="Search"/>
+    </div>
+     
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add" (click)="add(taskName.value); TaskName.value=''">
+      Add
+    </button>
+  </div>
+  <br>
+  
 <ul class="tasks">
   <li *ngFor="let task of tasks">
     <a routerLink="/details/{{task.id}}">
@@ -19,3 +27,4 @@
       (click)="delete(task)">x</button>
   </li>
 </ul>
+</div>

@@ -1,15 +1,17 @@
+<div class="position">
 <div *ngIf="task">
   <h2>{{task.name}} Details</h2>
-  <div><span>ID: </span>{{task.id}}</div>
+  <div><span class="badge badge-ID" >ID: </span>{{task.id}}</div>
   <div>
     <label>Name:
-      <input [(ngModel)]="task.name" placeholder="name"/>
+      <input type="text" class="form-control" [(ngModel)]="task.name" placeholder="name"/>
     </label>
   </div>
-  <div><span>Department: </span>{{task.department}}</div>
-  <div><span>Employee(s) working on it: </span>{{task.employee}}</div>
-  <div><span>Deadline: </span>{{task.deadline}}</div>
+  <div class="font-weight-bold"><span class="badge badge-secondary">Department: </span>{{task.department}}</div>
+  <div class="font-weight-bold"><span class="badge badge-secondary">Employee(s) working on it: </span>{{task.employee}}</div>
+  <div class="font-weight-bold"><span class="badge badge-secondary">Deadline: </span>{{task.deadline}}</div>
 
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button type="button" class="btn btn-light" (click)="goBack()">Go Back</button>
+  <button class="backbutton" (click)="save()">Save</button>
+</div>
 </div>

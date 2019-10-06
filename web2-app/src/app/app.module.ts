@@ -27,6 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 //Bootstrap Modules
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { EmployeeSearchComponent } from './employee-search/employee-search.component';
+import { TaskSearchComponent } from './task-search/task-search.component';
 
 
 @NgModule({
@@ -62,6 +63,8 @@ import { EmployeeSearchComponent } from './employee-search/employee-search.compo
     DashboardComponent,
 
     EmployeeSearchComponent,
+
+    TaskSearchComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
