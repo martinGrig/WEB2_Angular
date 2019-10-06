@@ -1,6 +1,6 @@
 <div class="position">
 <div *ngIf="employee">
-    <h2>{{employee.name}} Details</h2>
+    <h2 class="headeroption">{{employee.name}} Details</h2>
     <div><span class="badge badge-ID" >ID: </span> {{employee.id}}</div>
     <div>
       <label>Name:
@@ -12,7 +12,10 @@
         <input type="text" class="form-control" [(ngModel)]="employee.position" placeholder="position"/>
       </label>
     </div>
-    <div class="font-weight-bold"><span class="badge badge-secondary">Department: </span > {{employee.department}}</div>
+    <div class="font-weight-bold">
+    <span class="glyphicon glyphicon-briefcase"></span>
+    <br>
+    <span class="badge badge-secondary"> Department: </span > {{employee.department}}</div>
     <button type="button" class="btn btn-light" (click)="goBack()">Go Back</button>
     <button class="backbutton" (click)="save()">Save</button>
   </div>

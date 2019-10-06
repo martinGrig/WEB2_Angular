@@ -1,9 +1,9 @@
 h1 {
-  font: Arial;
+  font-family: fantasy;
   font-size: 2em;
   margin-bottom: 0;
   margin-left: 48%;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 h2 {
@@ -37,4 +37,17 @@ nav a.active {
 
 .sections{
   margin-left: 32%;
+}
+body, html {
+  height: 100%;
+}
+.bgg{
+  /* The image used */
+  background-image: url("https://wallpaperaccess.com/full/104815.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

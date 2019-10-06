@@ -2,8 +2,9 @@ label {
     display: inline-block;
     width: 3em;
     margin: .5em 0;
-    color: #607D8B;
+    color: rgb(17, 72, 99);
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   input {
     height: 2em;
@@ -36,8 +37,8 @@ label {
   }
   .backbutton{
     margin-left: 9%;
-    background-color: rgb(190, 23, 60);
-    color: rgb(243, 237, 237);
+    background-color: rgb(138, 19, 45);
+    color: rgb(252, 248, 248);
     height: 45px;
     width: 85px;
     margin-top: 35px;
@@ -47,6 +48,10 @@ label {
   .form-control{
     width: 200px;
   }
-
+  
+  .headeroption{
+    margin-left: 3%;
+    font-family: fantasy;
+  }
   
   
