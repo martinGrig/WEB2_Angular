@@ -38,7 +38,7 @@
   font-size: small;
   color: white;
   padding: 0.5em 0.9em 0.9em 0.9em;
-  background-color:#405061;
+  background-color:#1e4672;
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -58,12 +58,12 @@ button.add {
   cursor: pointer;
   cursor: hand;
   font-family: Arial;
-  height: 2.6em;
+  height: 2.5em;
   color: #EEE;
 }
 
 button:hover {
-  background-color: #cfd8dc;
+  background-color: #367b99;
 }
 
 button.delete {
@@ -74,6 +74,14 @@ button.delete {
   top: -43px;
   background-color: rgb(119, 27, 27) !important;
   color: white;
+}
+
+.employees1{
+  margin-left: 42%;
+}
+
+.font-weight-bold {
+  margin-left: 7%;
 }
 
 
