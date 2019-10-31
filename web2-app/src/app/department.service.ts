@@ -11,7 +11,11 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class DepartmentService {
 
+<<<<<<< HEAD
+  private departmentsUrl = 'http://i875395.hera.fhict.nl/api/419549/department';  // URL to web api
+=======
   private departmentsUrl = 'http://i875395.hera.fhict.nl/api/400678/department';  // URL to web api
+>>>>>>> 9b798573a9ef92f1b99627da7a835c06d7624963
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
