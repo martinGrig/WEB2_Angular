@@ -1,15 +1,15 @@
 <div class="position">
 <div *ngIf="employee">
-    <h2 class="headeroption">{{employee.name}} Details</h2>
+    <h2 class="headeroption">{{employee.first_name}} Details</h2>
     <div><span class="badge badge-ID" >ID: </span> {{employee.id}}</div>
     <div>
       <label>Name:
-        <input type="text" class="form-control" [(ngModel)]="employee.name" placeholder="name"/>
+        <input type="text" class="form-control" [(ngModel)]="employee.first_name" placeholder="name"/>
       </label>
     </div>
     <div>
-      <label>Position:
-        <input type="text" class="form-control" [(ngModel)]="employee.position" placeholder="position"/>
+      <label>Last Name:
+        <input type="text" class="form-control" [(ngModel)]="employee.last_name" placeholder="Last Name"/>
       </label>
     </div>
     <div class="font-weight-bold">

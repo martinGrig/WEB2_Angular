@@ -23,10 +23,10 @@ export class EmployeesComponent implements OnInit {
     .subscribe(employees => this.employees = employees);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { alert("Please type a name"); return; }
-    this.employeeService.addEmployee({ name } as Employee)
+  add(first_name: string): void {
+    first_name = first_name.trim();
+    if (!first_name) { alert("Please type a name"); return; }
+    this.employeeService.addEmployee({ first_name } as Employee)
       .subscribe(employee => {
         this.employees.push(employee);
       });
