@@ -9,10 +9,13 @@
   <div class="md-form mt-0">
       <input #departmentName class="form-control" type="text" placeholder="Name" aria-label="Search"/>
     </div>
+    <div class="md-form mt-0">
+      <input #departmentBuilding class="form-control" type="text" placeholder="Builing" aria-label="Search"/>
+    </div>
      
     </label>
     <!-- (click) passes input value to add() and then clears the input -->
-    <button class="add" (click)="add(departmentName.value); departmentName.value=''">
+    <button class="add" (click)="add(departmentName.value, departmentBuilding.value); departmentName.value='' && departmentBuilding.value=''" >
       Add
     </button>
   </div>
