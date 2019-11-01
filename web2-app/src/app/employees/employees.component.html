@@ -8,12 +8,21 @@
   <label>
     <!-- Search form -->
 <div class="md-form mt-0">
-    <input #employeeName class="form-control" type="text" placeholder="Name" aria-label="Search"/>
+    <input #employeeFirstName class="form-control" type="text" placeholder="First Name" aria-label="Search"/>
   </div>
+<div class="md-form mt-0">
+    <input #employeeLastName class="form-control" type="text" placeholder="Last Name" aria-label="Search"/>
+  </div>
+<div class="md-form mt-0">
+    <input #employeeBirthDate class="form-control" type="date" placeholder="Birth Date" aria-label="Search"/>
+  </div>
+  <div class="md-form mt-0">
+      <input #employeeDepName class="form-control" type="text" placeholder="Department Number" aria-label="Search"/>
+    </div>
    
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button class="add" (click)="add(employeeName.value); employeeName.value=''">
+  <button class="add" (click)="add(employeeFirstName.value, employeeLastName.value); employeeFirstName.value='' && employeeLastName.value=''">
     Add
   </button>
 </div>

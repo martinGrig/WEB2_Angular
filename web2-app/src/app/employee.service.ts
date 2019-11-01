@@ -47,7 +47,7 @@ export class EmployeeService {
 
   /** GET task by id. Will 404 if id not found */
   getEmployee(id: number): Observable<Employee> {
-    const url = `${this.employeesUrl}/${id}`;
+    const url ='http://i875395.hera.fhict.nl/api/400678/employee?id=' + id;
     return this.http.get<Employee>(url).pipe(
       tap(_ => this.log(`fetched employee id=${id}`)),
       catchError(this.handleError<Employee>(`getEmployee id=${id}`))
@@ -76,23 +76,24 @@ export class EmployeeService {
     );
   }
 
-  /** DELETE: delete the task from the server */
-  deleteEmployee (employee: Employee | number): Observable<Employee> {
-    const id = typeof employee === 'number' ? employee : employee.id;
-    const url = `${this.employeesUrl}/${id}`;
-
-    return this.http.delete<Employee>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted employee id=${id}`)),
-      catchError(this.handleError<Employee>('deleteEmployee'))
-    );
+  updateEmployee(employee: Employee): Observable<any>{
+    const url = 'http://i875395.hera.fhict.nl/api/400678/employee?id=' + employee.id;
+    return this.http.put(url,employee, this.httpOptions).pipe(
+      tap(_ => {
+        console.log(`Updated Employee with id=${employee.id}`);
+      }),
+      catchError(this.handleError<Employee>('updateEmployee'))
+    );;
   }
 
-  /** PUT: update the task on the server */
-  updateEmployee (employee: Employee): Observable<any> {
-    return this.http.put(this.employeesUrl, employee, this.httpOptions).pipe(
-      tap(_ => this.log(`updated employee id=${employee.id}`)),
-      catchError(this.handleError<any>('updateEmployee'))
-    );
+  deleteEmployee(employee: Employee): Observable<Employee>{
+    const url = 'http://i875395.hera.fhict.nl/api/400678/employee?id=' + employee.id;
+    return this.http.delete<Employee>(url, this.httpOptions) .pipe(
+      tap(_ => {
+        console.log(`Deleted Employee with id=${employee.id}`);
+      }),
+      catchError(this.handleError<Employee>('deleteEmployee'))
+    );;
   }
 
   /**
