@@ -1,6 +1,7 @@
-export class Employee{
-    id:number;
-    name: string;
-    position: string;
-    department : string;
+export class Employee {
+    id: number;
+    first_name: string;
+    last_name: string;
+    department_id: number;
+    birth_date: string;
 }

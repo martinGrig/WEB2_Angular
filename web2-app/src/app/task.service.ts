@@ -11,7 +11,7 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class TaskService {
 
-  private tasksUrl = 'api/tasks';  // URL to web api
+  private tasksUrl = 'http://i875395.hera.fhict.nl/api/419549/task';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

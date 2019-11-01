@@ -23,10 +23,11 @@ export class DepartmentsComponent implements OnInit {
     .subscribe(departments => this.departments = departments);
   }
 
-  add(name: string): void {
+  add(name: string, building: string): void {
     name = name.trim();
+    building = building.trim();
     if (!name) { alert("Please type a name"); return; }
-    this.departmentService.addDepartment({ name } as Department)
+    this.departmentService.addDepartment({ name, building } as Department)
       .subscribe(department => {
        this.departments.push(department);
     });
