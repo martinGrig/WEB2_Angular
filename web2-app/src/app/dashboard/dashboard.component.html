@@ -15,7 +15,7 @@
   <a *ngFor="let department of departments" class="col-1-4"
       routerLink="/detailss/{{department.id}}">
     <div class="module department"
-    popover="ID: {{department.id}} Name: {{department.name}} Location: {{department.location}} Employee(s) working in it: {{department.employees}}"
+    popover="ID: {{department.id}} Name: {{department.name}} Building: {{department.building}} Employee(s) working in it: {{department.employees}}"
     triggers="mouseenter:mouseleave">
       <h4>{{department.name}}</h4>
     </div>
