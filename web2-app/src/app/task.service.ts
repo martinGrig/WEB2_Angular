@@ -84,17 +84,6 @@ export class TaskService {
     );
   }
 
-  /** DELETE: delete the task from the server */
-  
-  // deleteTask(task:Task): Observable<any> {
-  //   const url = 'http://i875395.hera.fhict.nl/api/419549/task?id=' + task.id;
-  //   return this.http.delete<Task>(url, this.httpOptions) .pipe(
-  //     tap(_ => {
-  //       console.log(`Deleted Task with id=${task.id}`);
-  //     }),
-  //     catchError(this.handleError<Task>('deleteTask'))
-  //   );;
-  // }
   deleteTask(task:Task): Observable<any> {
     const url = 'http://i875395.hera.fhict.nl/api/400678/task?id=' + task.id;
     return this.http.delete<Task>(url, this.httpOptions) .pipe(
