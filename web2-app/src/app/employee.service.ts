@@ -12,7 +12,7 @@ import { MessageService } from './message.service';
 })
 export class EmployeeService {
 
-  private employeesUrl = 'http://i875395.hera.fhict.nl/api/419549/employee';  // URL to web api
+  private employeesUrl = 'http://i875395.hera.fhict.nl/api/400678/employee';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
