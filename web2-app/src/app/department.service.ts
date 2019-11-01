@@ -46,7 +46,7 @@ export class DepartmentService {
 
   /** GET task by id. Will 404 if id not found */
   getDepartment(id: number): Observable<Department> {
-    const url = `${this.departmentsUrl}/${id}`;
+    const url = 'http://i875395.hera.fhict.nl/api/400678/department?id=' + id;
     return this.http.get<Department>(url).pipe(
       tap(_ => this.log(`fetched department id=${id}`)),
       catchError(this.handleError<Department>(`getDepartment id=${id}`))
