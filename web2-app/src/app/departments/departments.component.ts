@@ -48,7 +48,8 @@ export class DepartmentsComponent implements OnInit {
 
   delete(department: Department): void {
     this.departments = this.departments.filter(h => h !== department);
-    this.departmentService.deleteDepartment(department).subscribe();
+    this.departmentService.DeleteDepartment(department).subscribe();
   }
 
 }
+  

@@ -76,22 +76,25 @@ export class DepartmentService {
   }
 
   /** DELETE: delete the task from the server */
-  deleteDepartment (department: Department | number): Observable<Department> {
-    const id = typeof department === 'number' ? department : department.id;
-    const url = `${this.departmentsUrl}/${id}`;
-
-    return this.http.delete<Department>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted department id=${id}`)),
+  DeleteDepartment(department:Department): Observable<any> {
+    const url = 'http://i875395.hera.fhict.nl/api/400678/department?id=' + department.id;
+    return this.http.delete<Department>(url, this.httpOptions) .pipe(
+      tap(_ => {
+        console.log(`Deleted Department with id=${department.id}`);
+      }),
       catchError(this.handleError<Department>('deleteDepartment'))
-    );
+    );;
   }
 
   /** PUT: update the task on the server */
   updateDepartment (department: Department): Observable<any> {
-    return this.http.put(this.departmentsUrl, department, this.httpOptions).pipe(
-      tap(_ => this.log(`updated department id=${department.id}`)),
-      catchError(this.handleError<any>('updateDepartment'))
-    );
+    const url = 'http://i875395.hera.fhict.nl/api/400678/department?id=' + department.id;
+    return this.http.put(url,department, this.httpOptions).pipe(
+      tap(_ => {
+        console.log(`Updated Department with id=${department.id}`);
+      }),
+      catchError(this.handleError<Department>('updateDepartment'))
+    );;
   }
 
   /**
