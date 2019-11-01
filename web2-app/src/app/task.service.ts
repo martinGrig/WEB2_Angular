@@ -11,7 +11,7 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class TaskService {
 
-  private tasksUrl = 'http://i875395.hera.fhict.nl/api/419549/task';  // URL to web api
+  private tasksUrl = 'http://i875395.hera.fhict.nl/api/419549/task';  // URL to web api //http://i875395.hera.fhict.nl/api/400678/task
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -76,14 +76,15 @@ export class TaskService {
   }
 
   /** DELETE: delete the task from the server */
-  deleteTask (task: Task | number): Observable<Task> {
-    const id = typeof task === 'number' ? task : task.id;
-    const url = `${this.tasksUrl}/${id}`;
-
-    return this.http.delete<Task>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted task id=${id}`)),
+  
+  deleteTask(task:Task): Observable<any> {
+    const url = 'http://i875395.hera.fhict.nl/api/419549/task?id=' + task.id;
+    return this.http.delete<Task>(url, this.httpOptions) .pipe(
+      tap(_ => {
+        console.log(`Deleted Task with id=${task.id}`);
+      }),
       catchError(this.handleError<Task>('deleteTask'))
-    );
+    );;
   }
 
   /** PUT: update the task on the server */
