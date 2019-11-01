@@ -10,6 +10,7 @@ import { TaskService } from '../task.service';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[];
+  selectedTask = {id: null, department_id: 0, name: '', employees: [], due_date: null};
 
   constructor(private taskService: TaskService) { }
 
@@ -30,11 +31,19 @@ export class TasksComponent implements OnInit {
         this.tasks.push(task);
       });
   }
+  
 
   
   delete(task: Task): void {
     this.tasks = this.tasks.filter(h => h !== task);
     this.taskService.deleteTask(task).subscribe();
+  }
+  Delete(task: Task){
+    if(confirm("Are you sure?")) {
+      this.taskService.deleteTask(task).subscribe();
+      this.tasks = this.tasks.filter(t => t !== task);
+      this.selectedTask = {id: null, department_id: 0, name: '', employees: [], due_date: null};
+    }
   }
 
 }
