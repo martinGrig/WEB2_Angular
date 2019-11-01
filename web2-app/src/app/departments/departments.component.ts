@@ -47,8 +47,10 @@ export class DepartmentsComponent implements OnInit {
   }
 
   delete(department: Department): void {
+    if(confirm("Are you sure?")){
     this.departments = this.departments.filter(h => h !== department);
     this.departmentService.DeleteDepartment(department).subscribe();
+    }
   }
 
 }
