@@ -46,7 +46,7 @@ export class TaskService {
 
   /** GET task by id. Will 404 if id not found */
   getTask(id: number): Observable<Task> {
-    const url = `${this.tasksUrl}/${id}`;
+    const url = 'http://i875395.hera.fhict.nl/api/400678/task?id=' + id;
     return this.http.get<Task>(url).pipe(
       tap(_ => this.log(`fetched task id=${id}`)),
       catchError(this.handleError<Task>(`getTask id=${id}`))
@@ -95,24 +95,26 @@ export class TaskService {
   //     catchError(this.handleError<Task>('deleteTask'))
   //   );;
   // }
-  deleteTask(task: Task | number): Observable<Task>{
-    const id = typeof task === 'number' ? task : task.id;
-    const url = `${this.tasksUrl}?id=${id}`;
-    return this.http.delete<Task>(url, this.httpOptions)
-    .pipe(
+  deleteTask(task:Task): Observable<any> {
+    const url = 'http://i875395.hera.fhict.nl/api/400678/task?id=' + task.id;
+    return this.http.delete<Task>(url, this.httpOptions) .pipe(
       tap(_ => {
-        console.log(`Deleted Task with id=${id}`);
+        console.log(`Deleted Task with id=${task.id}`);
       }),
       catchError(this.handleError<Task>('deleteTask'))
-    );
+    );;
   }
+
 
   /** PUT: update the task on the server */
   updateTask (task: Task): Observable<any> {
-    return this.http.put(this.tasksUrl, task, this.httpOptions).pipe(
-      tap(_ => this.log(`updated task id=${task.id}`)),
-      catchError(this.handleError<any>('updateTask'))
-    );
+    const url = 'http://i875395.hera.fhict.nl/api/400678/task?id=' + task.id;
+    return this.http.put(url,task, this.httpOptions).pipe(
+      tap(_ => {
+        console.log(`Updated Task with id=${task.id}`);
+      }),
+      catchError(this.handleError<Task>('updateTask'))
+    );;
   }
 
   /**
