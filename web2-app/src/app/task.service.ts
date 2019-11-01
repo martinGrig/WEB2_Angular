@@ -68,23 +68,43 @@ export class TaskService {
   //////// Save methods //////////
 
   /** POST: add a new task to the server */
-  addTask (task: Task): Observable<Task> {
-    return this.http.post<Task>(this.tasksUrl, task, this.httpOptions).pipe(
-      tap((newTask: Task) => this.log(`added task w/ id=${newTask.id}`)),
+  // addTask (task: Task): Observable<Task> {
+  //   return this.http.post<Task>(this.tasksUrl, task, this.httpOptions).pipe(
+  //     tap((newTask: Task) => this.log(`added task w/ id=${newTask.id}`)),
+  //     catchError(this.handleError<Task>('addTask'))
+  //   );
+  // }
+  addTask(task: Task): Observable<Task>{
+    return this.http.post<Task>(this.tasksUrl, task, this.httpOptions)
+    .pipe(
+      tap((newTask: Task) => {
+        console.log(`Added Task with id=${newTask.id}`);
+      }),
       catchError(this.handleError<Task>('addTask'))
     );
   }
 
   /** DELETE: delete the task from the server */
   
-  deleteTask(task:Task): Observable<any> {
-    const url = 'http://i875395.hera.fhict.nl/api/419549/task?id=' + task.id;
-    return this.http.delete<Task>(url, this.httpOptions) .pipe(
+  // deleteTask(task:Task): Observable<any> {
+  //   const url = 'http://i875395.hera.fhict.nl/api/419549/task?id=' + task.id;
+  //   return this.http.delete<Task>(url, this.httpOptions) .pipe(
+  //     tap(_ => {
+  //       console.log(`Deleted Task with id=${task.id}`);
+  //     }),
+  //     catchError(this.handleError<Task>('deleteTask'))
+  //   );;
+  // }
+  deleteTask(task: Task | number): Observable<Task>{
+    const id = typeof task === 'number' ? task : task.id;
+    const url = `${this.tasksUrl}?id=${id}`;
+    return this.http.delete<Task>(url, this.httpOptions)
+    .pipe(
       tap(_ => {
-        console.log(`Deleted Task with id=${task.id}`);
+        console.log(`Deleted Task with id=${id}`);
       }),
       catchError(this.handleError<Task>('deleteTask'))
-    );;
+    );
   }
 
   /** PUT: update the task on the server */
