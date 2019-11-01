@@ -3,7 +3,7 @@
   <a *ngFor="let task of tasks" class="col-1-4"
       routerLink="/details/{{task.id}}">
     <div class="module task"
-      popover="ID: {{task.id}} Name: {{task.name}} Department: {{task.department}} Employee(s) working on it: {{task.employee}} Deadline: {{task.deadline}}"
+      popover="ID: {{task.id}} Name: {{task.name}} Department Id: {{task.department_id}} Employee(s) working on it: {{task.employees}} Deadline: {{task.due_date}}"
       triggers="mouseenter:mouseleave">
       <h4>{{task.name}}</h4>
     </div>
@@ -29,7 +29,7 @@
     <div class="module employee"
     popover="ID: {{employee.id}} Name: {{employee.name}} Position: {{employee.position}} Department: {{employee.department}}"
     triggers="mouseenter:mouseleave">
-      <h4>{{employee.name}}</h4>
+      <h4>{{employee.first_name}}</h4>
     </div>
   </a>
 </div>
