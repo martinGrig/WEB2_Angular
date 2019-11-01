@@ -25,7 +25,7 @@ export class DepartmentsComponent implements OnInit {
 
   add(name: string, building: string): void {
     name = name.trim();
-    name = building.trim();
+    building = building.trim();
     if (!name) { alert("Please type a name"); return; }
     this.departmentService.addDepartment({ name, building } as Department)
       .subscribe(department => {
