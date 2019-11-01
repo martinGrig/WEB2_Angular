@@ -27,7 +27,7 @@
   <a *ngFor="let employee of employees" class="col-1-4"
       routerLink="/detail/{{employee.id}}">
     <div class="module employee"
-    popover="ID: {{employee.id}} Name: {{employee.name}} Position: {{employee.position}} Department: {{employee.department}}"
+    popover="ID: {{employee.id}} First Name: {{employee.first_name}} Last Name: {{employee.last_name}} Birth Date: {{employee.birth_date}} Department Id: {{employee.department_id}}"
     triggers="mouseenter:mouseleave">
       <h4>{{employee.first_name}}</h4>
     </div>
