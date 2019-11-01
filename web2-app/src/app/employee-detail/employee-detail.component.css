@@ -53,5 +53,8 @@ label {
     margin-left: 3%;
     font-family: fantasy;
   }
-  
+  .badge{
+    height: 30px;
+    width: 30px;
+  }
   
