@@ -22,10 +22,10 @@ export class TasksComponent implements OnInit {
     .subscribe(tasks => this.tasks = tasks);
   }
 
-  add(name: string): void {
+  add(id: number, name: string, description: string, due_date:string): void {
     name = name.trim();
     if (!name) { alert("Please type a name"); return; }
-    this.taskService.addTask({ name } as Task)
+    this.taskService.addTask({ id, name, description, due_date } as Task)
       .subscribe(task => {
         this.tasks.push(task);
       });

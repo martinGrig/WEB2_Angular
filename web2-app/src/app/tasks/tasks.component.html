@@ -1,3 +1,4 @@
+<br>
 <div class="tasks1">
 
   <h2 class="font-weight-bold"><strong>Tasks</strong></h2>
@@ -6,13 +7,22 @@
   <div>
     <label>
       <!-- Search form -->
+      <div class="md-form mt-0">
+        <input #taskId class="form-control" type="number" placeholder="Id" aria-label="Search"/>
+      </div>
   <div class="md-form mt-0">
       <input #taskName class="form-control" type="text" placeholder="Name" aria-label="Search"/>
+    </div>
+    <div class="md-form mt-0">
+      <input #taskDescription class="form-control" type="text" placeholder="Description" aria-label="Search"/>
+    </div>
+    <div class="md-form mt-0">
+      <input #taskDueDate class="form-control" type="text" placeholder="Due Date" aria-label="Search"/>
     </div>
      
     </label>
     <!-- (click) passes input value to add() and then clears the input -->
-    <button class="add" (click)="add(taskName.value); taskName.value=''">
+    <button class="add" (click)="add(taskId.value, taskName.value, taskDescription.value, taskDueDate.value); taskId.value='' && taskName.value='' && taskDescription.value='' && taskDueDate.value=''">
       Add
     </button>
   </div>
